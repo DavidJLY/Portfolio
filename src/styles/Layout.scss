@@ -1,0 +1,38 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  .logo {
+    width: 300px;
+  }
+  nav {
+    a {
+      color: var(--text);
+      text-decoration: none;
+      margin: 0 15px;
+    }
+    align-content: center;
+  }
+  .toggleTheme-button {
+    height: 20px;
+    border-radius: 8px;
+    border: transparent;
+    background-color: var(--primary);
+    color: var(--text);
+    align-items: center;
+    margin-top: 50px;
+  }
+}
+
+.copyright {
+  color: var(--text);
+}
+
+footer {
+  nav {
+    a {
+      color: var(--text);
+      text-decoration: none;
+    }
+    align-content: center;
+  }
+}
