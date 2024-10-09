@@ -1,27 +1,24 @@
-import React, { useState } from "react"; // Ajout de useState pour gérer la langue
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 import { motion } from "framer-motion";
 import "../src/styles/portfolio.scss";
 import ParticlesBackground from "./components/ParticlesBackground";
-import { Header } from "./components/Layout";
-import { Footer } from "./components/Layout";
+import { Header, Footer } from "./components/Layout";
 import { Title } from "./components/Title";
 import { Skills } from "./components/Skills";
 import { About } from "./components/About";
 import { Projects } from "./components/Projects";
 import { ContactForm } from "./components/ContactForm";
 
-// Pas besoin de "translations" ici, le composant Title gère ça
-// import translations from "./translations";
-
 function Portfolio() {
-  const [language, setLanguage] = useState("fr"); // Le français est la langue par défaut
+  const [language, setLanguage] = useState("fr");
 
-  // Fonction pour basculer la langue
   const toggleLanguage = () => {
     setLanguage(language === "fr" ? "en" : "fr");
   };
 
-  // Variants pour définir les animations
   const fadeInUp = (delay = 0) => ({
     hidden: { opacity: 0, y: 200 },
     visible: { opacity: 1, y: 0, transition: { duration: 1, delay: delay } },
@@ -31,35 +28,67 @@ function Portfolio() {
     <div className="App">
       <ParticlesBackground />
 
-      {/* Ajout du bouton pour permuter la langue */}
-      <button onClick={toggleLanguage} className="language-toggle">
-        {language === "fr" ? "Switch to English" : "Passer en Français"}
-      </button>
-
-      <div className="content">
-        <Header language={language} />
-
-        {/* Application des animations avec des délais différents pour chaque section */}
-        <motion.div initial="hidden" animate="visible" variants={fadeInUp(0)}>
-          <Title language={language} /> {/* Passe la langue directement */}
-        </motion.div>
-
-        <motion.div initial="hidden" animate="visible" variants={fadeInUp(0.3)}>
-          <About language={language} />
-        </motion.div>
-
-        <motion.div initial="hidden" animate="visible" variants={fadeInUp(0.6)}>
-          <Skills language={language} />
-        </motion.div>
-
-        <motion.div initial="hidden" animate="visible" variants={fadeInUp(0.9)}>
-          <Projects language={language} />
-        </motion.div>
-
-        <motion.div initial="hidden" animate="visible" variants={fadeInUp(1.2)}>
-          <ContactForm language={language} />
-        </motion.div>
-
+      <div className="content container-fluid">
+        {" "}
+        {/* Conteneur Bootstrap global */}
+        <Header language={language} toggleLanguage={toggleLanguage} />
+        <main className="container mt-5">
+          {/* Conteneur Bootstrap pour le contenu principal */}
+          <div className="row">
+            <motion.div
+              className="col-12"
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp(0)}
+            >
+              <Title language={language} />
+            </motion.div>
+          </div>
+          <div className="row mt-4">
+            <motion.div
+              id="about"
+              className="col-12"
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp(0.3)}
+            >
+              <About language={language} />
+            </motion.div>
+          </div>
+          <div className="row mt-4">
+            <motion.div
+              id="skills"
+              className="col-12"
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp(0.6)}
+            >
+              <Skills language={language} />
+            </motion.div>
+          </div>
+          <div className="row mt-4">
+            <motion.div
+              id="projects"
+              className="col-12"
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp(0.9)}
+            >
+              <Projects language={language} />
+            </motion.div>
+          </div>
+          <div className="row mt-4">
+            <motion.div
+              id="contact"
+              className="col-12"
+              initial="hidden"
+              animate="visible"
+              variants={fadeInUp(1.2)}
+            >
+              <ContactForm language={language} />
+            </motion.div>
+          </div>
+        </main>
         <Footer language={language} />
       </div>
     </div>

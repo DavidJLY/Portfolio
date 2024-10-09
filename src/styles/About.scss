@@ -1,13 +1,9 @@
 .about {
-  color: var(--text); /* Utilise la variable de texte selon le thème */
-  /*background-color: var(--primary);*/
-
   height: 500px;
   width: 60%;
   margin: 0 auto;
   .content {
     display: flex;
-    color: var(--text);
     gap: 60px;
     .portrait {
       max-width: 350px;
