@@ -3,7 +3,7 @@ import "../styles/Layout.scss";
 
 export function Header({ language, toggleLanguage }) {
   return (
-    <header className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <header className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container-fluid">
         <div className="navbar-brand">David JOLY</div>
         <button

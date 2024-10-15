@@ -9,8 +9,9 @@ import { Header, Footer } from "./components/Layout";
 import { Title } from "./components/Title";
 import { Skills } from "./components/Skills";
 import { About } from "./components/About";
-import { Projects } from "./components/Projects";
+import { SkillsBars } from "./components/ProgressBar";
 import { ContactForm } from "./components/ContactForm";
+import { Projects } from "./components/Projects";
 
 function Portfolio() {
   const [language, setLanguage] = useState("fr");
@@ -32,7 +33,7 @@ function Portfolio() {
         {" "}
         {/* Conteneur Bootstrap global */}
         <Header language={language} toggleLanguage={toggleLanguage} />
-        <main className="container mt-5">
+        <main className="container-fluid mt-5">
           {/* Conteneur Bootstrap pour le contenu principal */}
           <div className="row">
             <motion.div
@@ -44,7 +45,7 @@ function Portfolio() {
               <Title language={language} />
             </motion.div>
           </div>
-          <div className="row mt-4">
+          <div className="row mt-5">
             <motion.div
               id="about"
               className="col-12"
@@ -55,29 +56,45 @@ function Portfolio() {
               <About language={language} />
             </motion.div>
           </div>
-          <div className="row mt-4">
-            <motion.div
-              id="skills"
-              className="col-12"
-              initial="hidden"
-              animate="visible"
-              variants={fadeInUp(0.6)}
-            >
-              <Skills language={language} />
-            </motion.div>
+          <div className="row">
+            <div className="mt-5">
+              <motion.div
+                id="skills"
+                className="col-12 mt-5"
+                initial="hidden"
+                animate="visible"
+                variants={fadeInUp(0.6)}
+              >
+                <Skills language={language} />
+              </motion.div>
+            </div>
+            <div className="mt-4 mx-auto w-50">
+              <motion.div
+                className="col-12"
+                initial="hidden"
+                animate="visible"
+                variants={fadeInUp(0.6)}
+              >
+                <SkillsBars
+                  percentage={25}
+                  technology="Javascript"
+                  language={language}
+                />
+              </motion.div>
+            </div>
+            <div className="row mt-5">
+              <motion.div
+                id="projects"
+                className="col-12"
+                initial="hidden"
+                animate="visible"
+                variants={fadeInUp(0.3)}
+              >
+                <Projects language={language} />
+              </motion.div>
+            </div>
           </div>
-          <div className="row mt-4">
-            <motion.div
-              id="projects"
-              className="col-12"
-              initial="hidden"
-              animate="visible"
-              variants={fadeInUp(0.9)}
-            >
-              <Projects language={language} />
-            </motion.div>
-          </div>
-          <div className="row mt-4">
+          <div className="row mt-5">
             <motion.div
               id="contact"
               className="col-12"
@@ -96,3 +113,13 @@ function Portfolio() {
 }
 
 export default Portfolio;
+
+{
+  /*{
+        const response = await axios.get(
+          `https://api.airtable.com/v0/app48WhVLwVGIojej/tblmgFEHpLChDRzRD`,
+          {
+            headers: {
+              Authorization: `Bearer patJf5zk4RePFLeGA.91e062b7a19c80ae79568610ea3320054f6de723b861d1fd7bcb891bc7a25234`,
+            },*/
+}

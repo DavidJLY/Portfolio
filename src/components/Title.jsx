@@ -6,8 +6,8 @@ export function Title({ language }) {
   return (
     <h1>
       {language === "fr"
-        ? "À la recherche d'un développeur web ?"
-        : "Looking for a web developer?"}
+        ? "Transformons vos idées en réalité digitale – Bienvenue sur mon portfolio !"
+        : "Let's turn your ideas into digital reality – Welcome to my portfolio."}
     </h1>
   );
 }
