@@ -61,12 +61,6 @@ export function Projects({ language }) {
               className="text-decoration-none"
             >
               <Card className="card">
-                {/*<Card.Img
-                  variant="top"
-                  src={project.fields["Image de couverture"]?.[0]?.url}
-                  alt={project.fields["Nom"]}
-                  className="img-fluid card-img"
-                />*/}
                 <div className="imgContainer">
                   <img
                     className="img-card img-fluid"

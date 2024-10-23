@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/About.scss";
-import portrait from "../images/portrait.jpg";
+import portrait from "../images/portrait-n&b.jpg";
 
 export function About() {
   return (
-    <div className="content row">
+    <div className="content row col-9 mx-auto mt-5">
       <img
         src={portrait}
         alt="Portrait"

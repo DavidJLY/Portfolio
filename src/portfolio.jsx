@@ -9,7 +9,6 @@ import { Header, Footer } from "./components/Layout";
 import { Title } from "./components/Title";
 import { Skills } from "./components/Skills";
 import { About } from "./components/About";
-import { SkillsBars } from "./components/ProgressBar";
 import { ContactForm } from "./components/ContactForm";
 import { Projects } from "./components/Projects";
 
@@ -68,20 +67,6 @@ function Portfolio() {
                 <Skills language={language} />
               </motion.div>
             </div>
-            <div className="mt-4 mx-auto w-50">
-              <motion.div
-                className="col-12"
-                initial="hidden"
-                animate="visible"
-                variants={fadeInUp(0.6)}
-              >
-                <SkillsBars
-                  percentage={25}
-                  technology="Javascript"
-                  language={language}
-                />
-              </motion.div>
-            </div>
             <div className="row mt-5">
               <motion.div
                 id="projects"
@@ -113,13 +98,3 @@ function Portfolio() {
 }
 
 export default Portfolio;
-
-{
-  /*{
-        const response = await axios.get(
-          `https://api.airtable.com/v0/app48WhVLwVGIojej/tblmgFEHpLChDRzRD`,
-          {
-            headers: {
-              Authorization: `Bearer patJf5zk4RePFLeGA.91e062b7a19c80ae79568610ea3320054f6de723b861d1fd7bcb891bc7a25234`,
-            },*/
-}
