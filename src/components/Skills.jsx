@@ -30,11 +30,11 @@ export function Skills({ language }) {
         </div>
         <div className="skill-card col-6 col-md-4 col-lg-3 mb-4 mx-1">
           <FaSass className="icon icone-sass" />
-          <span>Sass</span>
+          <span translate="no">Sass</span>
         </div>
         <div className="skill-card col-6 col-md-4 col-lg-3 mb-4 mx-1">
           <FaBootstrap className="icon icon-bootstrap" />
-          <span>Bootstrap</span>
+          <span translate="no">Bootstrap</span>
         </div>
         <div className="skill-card col-6 col-md-4 col-lg-3 mb-4 mx-1">
           <FaJs className="icon icon-js" />
@@ -42,7 +42,7 @@ export function Skills({ language }) {
         </div>
         <div className="skill-card col-6 col-md-4 col-lg-3 mb-4 mx-1">
           <FaReact className="icon icon-react" />
-          <span>React</span>
+          <span translate="no">React</span>
         </div>
         <div className="skill-card col-6 col-md-4 col-lg-3 mb-4 mx-1">
           <FaNodeJs className="icon icon-node" />

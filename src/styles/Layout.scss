@@ -1,34 +1,12 @@
 header {
   display: flex;
   justify-content: space-between;
-  /*border-bottom: 1px solid rgb(56, 59, 223);
-  box-shadow: 0 5px 10px rgb(56, 59, 223);*/
   border-bottom: 1px solid white;
   box-shadow: 0 5px 10px white;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  background-color: black;
-  z-index: 2;
-  .logo {
-    width: 130px;
-  }
-  nav {
-    a {
-      color: var(--text);
-      text-decoration: none;
-    }
-    align-content: center;
-  }
-}
 
-footer {
-  nav {
-    a {
-      color: var(--text);
-      text-decoration: none;
-    }
-    align-content: center;
-  }
+  z-index: 2;
+}
+.link {
+  color: #676097;
 }
