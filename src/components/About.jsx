@@ -10,7 +10,7 @@ export function About() {
         alt="Portrait"
         className="col-12 col-md-3 mb-4 mb-md-0 img-fluid rounded-pill"
       />
-      <p className="col-12 col-md-7">
+      <p className="col-12 col-md-7 mx-auto">
         Bonjour, <br />
         Après 18 ans passés dans un tout autre domaine, j'ai choisi de me
         réinventer en tant que développeur web, renouant ainsi avec des études
