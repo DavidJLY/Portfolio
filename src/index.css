@@ -1,35 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-
-/*
-:root[data-theme="light"] {
-  --h1: #133a90;
-  --h2: #c17871;
-  --text: #0a0029;
-  --background: #f4f0ff;
-  --primary: #c1b5d0;
-  --secondary: #8896b5;
-  --h3: #133a90;
-  --fourth: #eddfe4;
-  --accent: #c17871;
-  --box: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  --border: 15px;
-}
-:root[data-theme="dark"] {
-  --h1: black;
-  --h2: #8e453e;
-  --text: #e0d6ff;
-  --background: #1b1b2f;
-  --primary: #423960;
-  --secondary: #5a607a;
-  --third: #2d2d44;
-  --fourth: #2f2a3e;
-  --accent: #c17871;
-  --box: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  --border: 15px;
-}*/
-
 body {
-  font-family: "Poppins";
+  font-family: "Lato";
   font-weight: 400;
 }
 main {
@@ -40,9 +10,11 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: "Poppins";
+  font-family: "Lato";
   font-weight: 700;
-  color: var(--text); /* Utilise la variable de texte selon le thème */
+}
+p {
+  font-family: "Lato";
 }
 html {
   font-size: 100%;

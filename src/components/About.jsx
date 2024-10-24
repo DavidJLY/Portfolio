@@ -10,13 +10,19 @@ export function About() {
         alt="Portrait"
         className="col-3 img-fluid rounded-pill"
       />
-      <p className="col-9">
+      <p className="col-7">
         Bonjour, <br />
-        je suis David Joly, développeur web. Passionné par les technologies
-        modernes et en constante évolution, je suis un développeur web dévoué et
-        enthousiaste. Chaque ligne de code représente pour moi une opportunité
-        de résoudre des problèmes complexes et d'apporter des solutions
-        innovantes.
+        Après 18 ans passés dans un tout autre domaine, j'ai choisi de me
+        réinventer en tant que développeur web, renouant ainsi avec des études
+        que j'ai laissé de côté à l'âge de 20 ans. Aujourd'hui, je mets toute ma
+        motivation et mon expertise au service de projets web modernes,
+        fonctionnels et esthétiques. Mon parcours atypique me permet d'apporter
+        un regard neuf, combinant rigueur, créativité et une forte envie
+        d'apprendre chaque jour. Vous trouverez ici une sélection de mes
+        projets, réalisés avec des technologies telles que HTML, CSS,
+        JavaScript, React, et bien d'autres. N'hésitez pas à explorer mon
+        travail, et si vous souhaitez en savoir plus ou collaborer, je serais
+        ravi d'en discuter !
       </p>
     </div>
   );
