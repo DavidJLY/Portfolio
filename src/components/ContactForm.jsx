@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "../styles/ContactForm.scss";
 
 export const ContactForm = ({ language }) => {
   const form = useRef();
+  const [messageSent, setMessageSent] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -15,6 +16,8 @@ export const ContactForm = ({ language }) => {
       .then(
         () => {
           console.log("SUCCESS!");
+          setMessageSent(true);
+          form.current.reset(); // Réinitialiser le formulaire
         },
         (error) => {
           console.log("FAILED...", error.text);
@@ -27,6 +30,13 @@ export const ContactForm = ({ language }) => {
       <h2 className="text-center">
         {language === "fr" ? "Contactez-moi" : "Contact me"}
       </h2>
+      {messageSent && (
+        <p className="text-success text-center">
+          {language === "fr"
+            ? "Votre message a été envoyé avec succès !"
+            : "Your message was sent successfully!"}
+        </p>
+      )}
       <form ref={form} onSubmit={sendEmail} className="mt-4">
         <div className="mb-3 col-md-6 mx-auto">
           <label className="form-label">
