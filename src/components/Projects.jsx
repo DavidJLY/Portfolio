@@ -54,33 +54,33 @@ export function Projects({ language }) {
             className="col-md-4 mb-5 d-flex justify-content-center"
             key={project.id}
           >
-            <a
-              href={project.fields["lien du projet"]}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-decoration-none"
-            >
-              <Card className="card">
-                <div className="imgContainer">
+            <Card className="card">
+              <div className="imgContainer">
+                <a
+                  href={project.fields["lien du projet"]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-none"
+                >
                   <img
                     className="img-card img-fluid"
                     src={project.fields["Image de couverture"]?.[0]?.url}
                     alt={project.fields["Nom"]}
                   />
+                </a>
+              </div>
+              <Card.Body className="content">
+                <Card.Title>{project.fields["Nom"]}</Card.Title>
+                <Card.Text>{project.fields.Description}</Card.Text>
+                <div className="mb-2">
+                  {project.fields.Technologies?.map((tech) => (
+                    <span key={tech} className="badge bg-secondary me-1">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-                <Card.Body className="content">
-                  <Card.Title>{project.fields["Nom"]}</Card.Title>
-                  <Card.Text>{project.fields.Description}</Card.Text>
-                  <div className="mb-2">
-                    {project.fields.Technologies?.map((tech) => (
-                      <span key={tech} className="badge bg-secondary me-1">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </Card.Body>
-              </Card>
-            </a>
+              </Card.Body>
+            </Card>
           </div>
         ))}
       </div>

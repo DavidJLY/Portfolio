@@ -22,11 +22,11 @@ export function Skills({ language }) {
       <div className="row justify-content-center">
         <div className="skill-card col-6 col-md-4 col-lg-3 mb-4 mx-1">
           <FaHtml5 className="icon icone-html" />
-          <span>HTML5</span>
+          <span translate="no">HTML5</span>
         </div>
         <div className="skill-card col-6 col-md-4 col-lg-3 mb-4 mx-1">
           <FaCss3Alt className="icon icone-css" />
-          <span>CSS3</span>
+          <span translate="no">CSS3</span>
         </div>
         <div className="skill-card col-6 col-md-4 col-lg-3 mb-4 mx-1">
           <FaSass className="icon icone-sass" />
@@ -46,19 +46,19 @@ export function Skills({ language }) {
         </div>
         <div className="skill-card col-6 col-md-4 col-lg-3 mb-4 mx-1">
           <FaNodeJs className="icon icon-node" />
-          <span>Node.js</span>
+          <span translate="no">Node.js</span>
         </div>
         <div className="skill-card col-6 col-md-4 col-lg-3 mb-4 mx-1">
           <SiExpress className="icon icon-express" />
-          <span>Express.js</span>
+          <span translate="no">Express.js</span>
         </div>
         <div className="skill-card col-6 col-md-4 col-lg-3 mb-4 mx-1">
           <SiMongodb className="icon icon-mongo" />
-          <span>MongoDB</span>
+          <span translate="no">MongoDB</span>
         </div>
         <div className="skill-card col-6 col-md-4 col-lg-3 mb-4 mx-1">
           <FaGitAlt className="icon icon-git" />
-          <span>Git</span>
+          <span translate="no">Git</span>
         </div>
         <div className="skill-card col-6 col-md-4 col-lg-3 mb-4 mx-1">
           <FaGithub className="icon icon-github" />

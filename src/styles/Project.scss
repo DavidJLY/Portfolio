@@ -43,3 +43,12 @@
   margin-top: -40px;
   transition-delay: 0.3s;
 }
+
+@media (max-width: 650px) {
+  .card:active .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+  }
+}
