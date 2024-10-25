@@ -11,6 +11,7 @@ import { Skills } from "./components/Skills";
 import { About } from "./components/About";
 import { ContactForm } from "./components/ContactForm";
 import { Projects } from "./components/Projects";
+import { DownloadCV } from "./components/DownloadCV";
 
 function Portfolio() {
   const [language, setLanguage] = useState("fr");
@@ -76,6 +77,17 @@ function Portfolio() {
                 variants={fadeInUp(0.3)}
               >
                 <Projects language={language} />
+              </motion.div>
+            </div>
+            <div className="row">
+              <motion.div
+                id="projects"
+                className="col-12"
+                initial="hidden"
+                animate="visible"
+                variants={fadeInUp(0.3)}
+              >
+                <DownloadCV language={language} />
               </motion.div>
             </div>
           </div>
