@@ -9,7 +9,7 @@ export const DownloadCV = ({ language }) => {
 
   return (
     <div className="download-cv">
-      <Button onClick={handleDownload} variant="primary">
+      <Button onClick={handleDownload} variant="dark">
         <FaDownload className="me-2" />{" "}
         {language === "fr" ? "Télécharger mon CV" : "Download CV"}
       </Button>
