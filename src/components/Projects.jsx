@@ -12,10 +12,10 @@ export function Projects({ language }) {
     const fetchProjects = async () => {
       try {
         const response = await axios.get(
-          `https://api.airtable.com/v0/app48WhVLwVGIojej/tblmgFEHpLChDRzRD`,
+          `https://api.airtable.com/v0/${process.env.REACT_APP_AIRTABLE_BASE_ID}/${process.env.REACT_APP_AIRTABLE_NAME}`,
           {
             headers: {
-              Authorization: `Bearer patJf5zk4RePFLeGA.91e062b7a19c80ae79568610ea3320054f6de723b861d1fd7bcb891bc7a25234`,
+              Authorization: `Bearer ${process.env.REACT_APP_AIRTABLE_API_KEY}`,
             },
           }
         );
