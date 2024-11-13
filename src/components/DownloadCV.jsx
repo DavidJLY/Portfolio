@@ -4,7 +4,7 @@ import { FaDownload } from "react-icons/fa"; // Optionnel, pour ajouter une icô
 
 export const DownloadCV = ({ language }) => {
   const handleDownload = () => {
-    window.open("/cv.pdf", "_blank"); // Ouvre le fichier dans un nouvel onglet
+    window.open("/CV-DavidJoly.pdf", "_blank"); // Ouvre le fichier dans un nouvel onglet
   };
 
   return (
