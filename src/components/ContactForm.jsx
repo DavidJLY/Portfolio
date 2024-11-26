@@ -10,9 +10,14 @@ export const ContactForm = ({ language }) => {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_mq49p09", "template_3z0b5ed", form.current, {
-        publicKey: "dXPo3bfPuGFsJCnyA",
-      })
+      .sendForm(
+        process.env.REACT_APP_EMAIL_JS_SERVICE,
+        process.env.REACT_APP_EMAIL_JS_TEMPLATE,
+        form.current,
+        {
+          publicKey: process.env.REACT_APP_EMAIL_JS_PUBLICKEY,
+        }
+      )
       .then(
         () => {
           console.log("SUCCESS!");
