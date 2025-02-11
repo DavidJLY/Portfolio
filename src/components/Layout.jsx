@@ -99,8 +99,8 @@ export function Footer({ language }) {
       </nav>
       <p className="copyright">
         {language === "fr"
-          ? " ©  Copyright 2024 | David Joly | Tous droits réservés"
-          : " © Copyright 2024 | David Joly | All rights reserved"}
+          ? " ©  Copyright 2025 | David Joly | Tous droits réservés"
+          : " © Copyright 2025 | David Joly | All rights reserved"}
       </p>
     </footer>
   );
